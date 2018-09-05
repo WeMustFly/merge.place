@@ -1,0 +1,9 @@
+// Для импорта в диспетчер подключений: @import "navigation";
+
+.navigation {
+    padding: 48px 0;
+    width: 112px;
+    height: 100%;
+    border-right: 1px solid $LINE;
+    @extend %flex-col-sb;
+}

@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700|Roboto+Mono:500,700');
+@import '../scss/variables';
+@import '../scss/mixines';
+@import 'page';
+@import 'container';
+@import 'link';
+@import 'logo';
+@import 'merge';
+@import 'navigation';
+@import 'button';
+@import 'button-menu';
+@import 'wrapper';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+}
+
+a {
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}

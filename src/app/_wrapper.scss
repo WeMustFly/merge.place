@@ -1,0 +1,20 @@
+// Для импорта в диспетчер подключений: @import "wrapper";
+
+.wrapper {
+    &--row {
+        @extend %flex-row;
+    }
+
+    &--col {
+        @extend %flex-col;
+    }
+    &--start-title {
+        margin-bottom: 15px;
+    }
+    &--start-link {
+        height: 55px;
+        width: 548px;
+        border-bottom: 1px solid $LINE;
+        margin-bottom: 19px;
+    }
+}

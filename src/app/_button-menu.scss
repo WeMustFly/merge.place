@@ -1,0 +1,12 @@
+// Для импорта в диспетчер подключений: @import "button-menu";
+
+.button-menu {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    &__img {
+        fill: $MERGE;
+        width: 24px;
+        height: 24px;
+    }
+}
