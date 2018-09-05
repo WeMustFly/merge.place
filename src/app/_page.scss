@@ -1,8 +1,0 @@
-// Для импорта в диспетчер подключений: @import "page";
-
-.page {
-  @extend %flex-row-fs;
-  width: 100%;
-  height: 100vh;
-  background-color: $BLACK;
-}
