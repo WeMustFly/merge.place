@@ -1,0 +1,54 @@
+@import '../../scss/variables';
+@import '../../scss/mixines';
+
+.button-membership {
+    width: 187px;
+    height: 40px;
+    background-color: $BUTTON;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    font-family: $base-font;
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.7px;
+    border-radius: 4px;
+    @extend %flex-row-c;
+    flex-flow: nowrap;
+    &__text {
+        text-align: center;
+        @extend %flex-row-c;
+        align-content: center;
+        flex-flow: nowrap;
+    }
+    &__img {
+        height: 12px;
+        width: 0;
+        stroke: none;
+        opacity: 0;
+    }
+
+    &:hover {
+        background-color: $MERGE;
+        color: $BLACK;
+        transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+    }
+
+    &:not(:hover) {
+        transition: ease-in-out 0.2s, fill ease-in-out 0.2s,
+            background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+    }
+    &:hover &__img {
+        fill: $BLACK;
+        transition: fill ease-in-out 0.2s;
+        width: 16px;
+        opacity: 1;
+        margin: 0 0 0 5px;
+        transition: width ease-in-out 0.2s, opacity ease-in-out 0.2s;
+    }
+    &:not(:hover) &__img {
+        transition: linear 0.1s;
+    }
+}

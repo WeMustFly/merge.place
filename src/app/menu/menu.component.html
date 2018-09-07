@@ -1,0 +1,123 @@
+<div class="container">
+    <section class="col">
+        <div class="inner">
+            <!-- TODO: MENU BUTTON -->
+            <button class="button-menu">
+                <div class="button-menu__item"></div>
+                <svg class='button-menu__img'>
+                    <use xlink:href='#close' />
+                </svg>
+            </button>
+            <p class="button-menu__description">
+                CLOSE
+            </p>
+        </div>
+    </section>
+    <section class="col">
+        <ul class="menu">
+            <li class="menu__item">
+                <a href="#" class="menu__link">
+                    Merge
+                </a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">
+                    Coworking space
+                </a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">
+                    Meeting Room
+                </a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">
+                    Events
+                </a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">
+                    About us
+                </a>
+            </li>
+        </ul>
+        <div class="lang__wrapper">
+            <a href="#" class="lang">
+                UA
+            </a>
+            <a href="#" class="lang">
+                RU
+            </a>
+            <a href="#" class="lang">
+                EN
+            </a>
+        </div>
+    </section>
+    <section class="col"></section>
+    <section class="col">
+        <div class="col__inner">
+            <div class="info-block info-block--calendar">
+                <div class="image__wrapper">
+                    <svg class="image">
+                        <use xlink:href='#calendar' />
+                    </svg>
+                </div>
+                <p class="text text--above">
+                    MON—FRI:
+                </p>
+                <p class="text text--under text--margin">
+                    9:00 – 20:00
+                </p>
+                <p class="text text--above">
+                    SAT, SUN:
+                </p>
+                <p class="text text--under">
+                    10:00 – 18:00
+                </p>
+            </div>
+            <div class="info-block info-block--location">
+                <div class="image__wrapper">
+                    <svg class="image">
+                        <use xlink:href='#location' />
+                    </svg>
+                </div>
+                <p class="text text--above text--locate">
+                    Kremenchug
+                </p>
+                <p class="text text--under text--locate">
+                    Nebesna Sotnia st. 17А
+                    “Proletarsky”
+                </p>
+            </div>
+
+            <!-- TODO: BUTTON COMPONENT -->
+            <app-button-map></app-button-map>
+        </div>
+    </section>
+    <section class="col">
+        <div class="col__inner">
+            <div class="info-block info-block--phone">
+                <div class="image__wrapper">
+                    <svg class="image">
+                        <use xlink:href='#phone' />
+                    </svg>
+                </div>
+                <a href="callto: 0970313451" class="contact contact--phone">
+                    097 031 3451
+                </a>
+            </div>
+            <div class="info-block info-block--mail">
+                <div class="image__wrapper">
+                    <svg class="image">
+                        <use xlink:href='#mail' />
+                    </svg>
+                </div>
+                <a href="mailto: hello@merge.place" class="contact contact--mail">
+                    hello@merge.place
+                </a>
+            </div>
+            <app-button-membership></app-button-membership>
+        </div>
+        <!-- TODO: BUTTON COMPONENT -->
+    </section>
+</div>

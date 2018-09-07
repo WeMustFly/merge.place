@@ -1,0 +1,52 @@
+@import '../../scss/variables';
+@import '../../scss/mixines';
+
+.button-map {
+    width: 187px;
+    height: 40px;
+    background-color: $BUTTON;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    font-family: $base-font;
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.7px;
+    border-radius: 4px;
+    @extend %flex-row-c;
+    flex-flow: nowrap;
+    &__text {
+        text-align: center;
+        @extend %flex-row-c;
+        align-content: center;
+        flex-flow: nowrap;
+    }
+    &__img {
+        height: 12px;
+        stroke: none;
+        height: 16px;
+        width: 16px;
+        fill: white;
+        margin-left: 10px;
+    }
+
+    &:hover {
+        background-color: $MERGE;
+        color: $BLACK;
+        transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+    }
+
+    &:not(:hover) {
+        transition: ease-in-out 0.2s, fill ease-in-out 0.2s,
+            background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+    }
+    &:hover &__img {
+        fill: $BLACK;
+        transition: fill ease-in-out 0.2s;
+    }
+    &:not(:hover) &__img {
+        transition: linear 0.1s;
+    }
+}

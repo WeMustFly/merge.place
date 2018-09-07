@@ -2,86 +2,182 @@
 @import '../../scss/mixines';
 
 .navigation {
-  padding: 48px 0;
-  width: 112px;
-  height: 100vh;
-  border-right: 1px solid $LINE;
-  @extend %flex-col-sb;
+    padding: 48px 0;
+    width: 112px;
+    min-width: 40px;
+    height: 100vh;
+    border-right: 1px solid $LINE;
+    @extend %flex-col-sb;
 }
 .wrapper {
-  &--row {
-    @extend %flex-row;
-  }
-
-  &--col {
     @extend %flex-col;
-  }
-  &--start-title {
-    margin-bottom: 15px;
-  }
-  &--start-link {
-    height: 55px;
-    width: 548px;
-    border-bottom: 1px solid $LINE;
-    margin-bottom: 19px;
-  }
 }
 .logo {
-  fill: $MERGE;
-  width: 31px;
-  height: 40px;
+    fill: $MERGE;
+    width: 31px;
+    height: 40px;
 }
 .button-menu {
-  background-color: transparent;
-  outline: none;
-  border: none;
-  &__img {
-    fill: $MERGE;
-    width: 24px;
     height: 24px;
-  }
-}
-.link {
-  text-decoration: none;
+    width: 24px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    padding: 0 2px;
+    &__wrapper {
+        @extend %flex-col-c;
+        height: 30px;
+        width: 30px;
+        position: relative;
 
-  &--social {
+        &:hover .button-menu__cloud {
+            height: 20px;
+            background-color: $GREY;
+            color: white;
+            transition: background-color 0.3s ease-in-out,
+                color 0.3s ease-in-out;
+
+            &:after {
+                border-top-color: $GREY;
+                transition: border-top-color 0.3s ease-in-out;
+            }
+        }
+    }
+    &__cloud {
+        height: 0;
+        width: 60px;
+        text-transform: uppercase;
+        font-family: $base-font;
+        background-color: transparent;
+        border-radius: 3px;
+        font-size: 10px;
+        font-weight: 500;
+        color: transparent;
+        top: -34px;
+        left: -50%;
+        @extend %flex-row-c;
+        position: absolute;
+
+        &:after {
+            top: 100%;
+            left: 50%;
+            border: solid transparent;
+            content: '';
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: transparent;
+            border-top-color: transparent;
+            border-width: 5px;
+            margin-left: -5px;
+        }
+    }
+
+    &__item {
+        height: 2px;
+        background-color: $GREY;
+        width: 10px;
+        border: none;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            background-color: $GREY;
+            width: 14px;
+            top: 5px;
+            left: 2px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            background-color: $GREY;
+            width: 18px;
+            bottom: 5px;
+            left: 2px;
+        }
+    }
+    &:hover &__item,
+    &:hover &__item::before,
+    &:hover &__item::after {
+        background-color: $MERGE;
+        transition: background-color 0.2s ease-in-out;
+    }
+    &:not(:hover) &__item,
+    &:not(:hover) &__item::before,
+    &:not(:hover) &__item::after {
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    &:focus {
+        background-color: $BUTTON;
+        height: 32px;
+        width: 32px;
+        transform: rotate(90deg);
+        transition: transform 0.2s ease-in-out,
+            background-color 0.4s ease-in-out;
+    }
+    &:focus &__item {
+        height: 0;
+
+        &::before {
+            left: 9px;
+            top: 7px;
+            transform-origin: center left;
+            transform: rotate(45deg);
+            transition: transform 0.2s linear;
+            width: 20px;
+        }
+        &::after {
+            left: 9px;
+            bottom: 7px;
+            transform-origin: center left;
+            transform: rotate(-45deg);
+            transition: transform 0.2s linear;
+            width: 20px;
+        }
+    }
+
+    &:not(:focus) {
+        transition: transform 0.2s ease-in-out,
+            background-color 0.4s ease-in-out;
+    }
+    &:not(:focus) &__item {
+        transition: 0.1s ease-in-out;
+
+        &::before {
+            transition: 0.2s linear;
+        }
+        &::after {
+            transition: 0.2s linear;
+        }
+    }
+}
+
+.social {
+    text-decoration: none;
+
     width: 24px;
     height: 24px;
     @extend %flex-col-c;
     background-color: $BUTTON;
     margin-bottom: 20px;
     &:last-child {
-      margin-bottom: 0;
+        margin-bottom: 0;
     }
-  }
 
-  &__img {
-    &--main {
-      width: 16px;
-      height: 16px;
-      fill: $MERGE;
-      margin-right: 9px;
+    &__img {
+        width: 16px;
+        height: 16px;
+        fill: white;
+        &:hover {
+            fill: $MERGE;
+            transition: fill ease-in-out 0.1s;
+        }
+        &:not(:hover) {
+            transition: fill ease-in-out 0.1s;
+        }
     }
-    &--social {
-      width: 16px;
-      height: 16px;
-    }
-  }
-
-  &--main {
-    @extend %flex-row;
-    justify-content: flex-start;
-    align-items: center;
-    margin-right: 35px;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-  &__text {
-    text-transform: uppercase;
-    font-size: 10px;
-    font-family: $base-font;
-    color: $MERGE;
-    font-weight: 700;
-  }
 }
