@@ -9,6 +9,10 @@ import { ButtonMembershipComponent } from './common/buttons/button-membership/bu
 import { ButtonMapComponent } from './common/buttons/button-map/button-map.component';
 import { ButtonBookRoomComponent } from './common/buttons/button-book-room/button-book-room.component';
 import { BookingComponent } from './pages/booking/booking.component';
+import { LoaderComponent } from './common/loader/loader.component';
+import { ButtonResidentComponent } from './common/buttons/button-resident/button-resident.component';
+import { ResidentCardComponent } from './pages/booking/resident-card/resident-card.component';
+
 
 @NgModule({
     declarations: [
@@ -19,7 +23,10 @@ import { BookingComponent } from './pages/booking/booking.component';
         ButtonMembershipComponent,
         ButtonMapComponent,
         ButtonBookRoomComponent,
-        BookingComponent
+        BookingComponent,
+        LoaderComponent,
+        ButtonResidentComponent,
+        ResidentCardComponent
     ],
     imports: [BrowserModule],
     providers: [],

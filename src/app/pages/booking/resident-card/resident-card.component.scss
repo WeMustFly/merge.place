@@ -1,0 +1,150 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/mixines';
+
+.wrapper {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(17, 17, 17, 0.7);
+	@extend %flex-col-c;
+	align-items: center;
+}
+
+.container {
+	padding: 32px 39px 56px 39px;
+	width: 492px;
+	height: 566px;
+	border-radius: 3px;
+	background-color: #1f1f1f;
+	box-shadow: 0 12px 30px 24px rgba(0, 0, 0, 0.1);
+	@extend %flex-col-c;
+	align-items: flex-start;
+	position: relative;
+	z-index: 1;
+}
+
+.title {
+	font-family: $title-font;
+	font-size: 24px;
+	font-weight: 500;
+	text-align: left;
+	color: #ffffff;
+	margin-bottom: 4px;
+}
+
+.description {
+	font-family: Montserrat;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 2;
+	text-align: left;
+	color: $GREY;
+}
+
+.inner-line {
+	flex-basis: 90px;
+	width: 100%;
+	@extend %flex-row;
+	align-items: center;
+	border-bottom: 1px solid $LINE;
+}
+
+.caption {
+	padding-left: 15px;
+	font-family: $base-font;
+	font-size: 10px;
+	font-weight: 500;
+	line-height: 1.6;
+	text-align: left;
+	color: white;
+}
+
+.grid {
+	padding: 32px 0 42px 0;
+	width: 100%;
+	@extend %flex-row;
+}
+
+.col {
+	width: 50%;
+	@extend %flex-col;
+	margin-right: 30px;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.row {
+	@extend %flex-row;
+	align-items: center;
+	margin-bottom: 24px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	&--notmarg {
+		margin: 0;
+	}
+}
+
+.image {
+	flex-shrink: 0;
+	width: 32px;
+	height: 32px;
+	fill: $MERGE;
+}
+
+.inner-col {
+	width: 100%;
+	@extend %flex-col-c;
+	align-items: center;
+}
+
+.price {
+    font-family: $base-font;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: left;
+	color: white;
+	margin-bottom: 24px;
+    &__sum {
+        font-family: $title-font;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: left;
+        color: white;
+        &::after {
+            content: ' UAH';
+            text-transform: uppercase;
+            font-family: $base-font;
+            font-size: 8px;
+            font-weight: 700;
+            line-height: 2;
+            letter-spacing: 0.5px;
+            text-align: left;
+            color: $GREY;
+        }
+    }
+}
+
+.close {
+	position: absolute;
+	top: 24px;
+	right: 24px;
+	width: 20px;
+	height: 20px;
+	background-color: #141414;
+	outline: none;
+	border: none;
+	&__img {
+		fill: $GREY;
+		width: 20px;
+  		height: 20px;
+	}
+	&:hover &__img {
+		fill: $MERGE;
+		transition: fill ease-in-out 0.2s;
+	}
+	&:not(:hover) &__img {
+		transition: fill ease-in-out 0.2s;
+	}
+}

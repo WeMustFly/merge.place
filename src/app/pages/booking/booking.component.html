@@ -19,7 +19,7 @@
     <div class="wrapper wrapper--sb wrapper--middle-line">
       <button class="button-choice">
         <p class="button-choice__title">Month</p>
-        <p class="button-choice__subtitle">Resident card</p>
+        <a class="button-choice__subtitle">Resident card</a>
         <p class="button-choice__price">1000</p>
         <svg class="button-choice__img">
           <use xlink:href='#infoborder' />
@@ -41,7 +41,7 @@
       </button>
     </div>
     <div class="wrapper-col wrapper-col--form">
-      <form action="" name='booking-form' class="form">
+      <form action="" name='booking-form' id='book-form' class="form">
         <div class="wrapper wrapper--sb wrapper--label-margin">
           <div class="wrapper-col">
             <label for="full-name-label" class="label">FULL NAME*</label>
@@ -70,7 +70,9 @@
         Price:
         <span class="price__sum">1000</span>
       </p>
-      <button class="button-apply">apply</button>
+      <button class="button-apply" form='book-form'>apply</button>
     </div>
   </div>
 </div>
+<!-- TODO: MAKE TRANSPARENT BACKGROUND -->
+<!-- <app-resident-card></app-resident-card> -->

@@ -33,7 +33,7 @@
     }
 
     &:hover {
-        background-color: $MERGE;
+        background-color: $BUTTON-HOVER;
         color: $BLACK;
         transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
     }

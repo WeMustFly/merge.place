@@ -1,10 +1,11 @@
 @import '../../../../scss/variables';
 @import '../../../../scss/mixines';
 
-.button-book-room {
+.button {
     width: 187px;
     height: 40px;
-    background-color: $BUTTON;
+    background-color: $BUTTON-HOVER;
+    color: $BLACK;
     outline: none;
     border: none;
     text-transform: uppercase;
@@ -12,7 +13,7 @@
     font-size: 10px;
     font-weight: 700;
     text-align: center;
-    color: white;
+    
     letter-spacing: 0.7px;
     border-radius: 4px;
     @extend %flex-row-c;
@@ -31,15 +32,6 @@
         opacity: 0;
     }
 
-    &:hover {
-        background-color: $BUTTON-HOVER;
-        color: $BLACK;
-        transition: ease-in-out 0.2s;
-    }
-
-    &:not(:hover) {
-        transition: ease-in-out 0.2s;
-    }
     &:hover &__img {
         transition: width ease-in-out 0.2s, opacity ease-in-out 0.2s;
         width: 16px;

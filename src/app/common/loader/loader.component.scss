@@ -1,0 +1,21 @@
+@import '../../../scss/variables';
+@import '../../../scss/mixines';
+
+.loader {
+	
+    &__title {
+        font-size: 80px;
+        text-align: left;
+        font-family: $title-font;
+        letter-spacing: 20px;
+        color: #1F1F1F;
+		text-align: center;
+		text-shadow: 0 12px 4px rgba(0, 0, 0, 0.5);;
+    }
+    &__percent {
+        font-family: Montserrat;
+        font-size: 10px;
+        text-align: center;
+        color: #ffffff;
+    }
+}
