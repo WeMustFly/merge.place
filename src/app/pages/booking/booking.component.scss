@@ -1,0 +1,294 @@
+@import '../../../scss/variables';
+@import '../../../scss/mixines';
+
+.logo {
+    width: 31.1px;
+    height: 40px;
+	fill: $MERGE;
+    &__wrapper {
+		position: absolute;
+		top: 48px;
+		left: 40px;
+    }
+}
+
+.container {
+	padding: 10px 0;
+	width: 428px;
+	flex-basis: 623px;
+	@extend %flex-col-sb;
+	align-items: flex-start;
+}
+
+.wrapper {
+	width: 100%;
+    @extend %flex-row;
+    align-items: center;
+    &--fs {
+        justify-content: flex-start;
+    }
+    &--sb {
+		justify-content: space-between;
+		align-items: center;
+    }
+    &--top-line {
+        padding-bottom: 22px;
+        border-bottom: 1px solid #515151;
+    }
+    &--middle-line {
+        padding-bottom: 30px;
+        border-bottom: 1px solid #1f1f1f;
+    }
+    &--label-margin {
+        margin-bottom: 22px;
+    }
+    &--bottom-line {
+        padding-top: 26px;
+        border-top: 1px solid #1f1f1f;
+    }
+}
+
+.wrapper-col {
+    @extend %flex-col;
+    &--form {
+		padding: 32px 0 29px 0;
+		width: 100%;
+    }
+}
+
+.button-back {
+    width: 32px;
+    height: 32px;
+    background-color: $BUTTON;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    @extend %flex-row-c;
+    align-items: center;
+    margin-right: 16px;
+    &__img {
+        width: 17px;
+        height: 17px;
+        fill: $GREY;
+    }
+    &__text {
+		cursor: default;
+        text-transform: uppercase;
+        font-family: $base-font;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.7px;
+        text-align: left;
+        color: $GREY;
+	}
+    &:hover &__img {
+        fill: $MERGE;
+        transition: fill ease-in-out 0.2s;
+    }
+    &:not(:hover) &__img {
+        transition: fill ease-in-out 0.2s;
+    }
+}
+
+.title {
+    font-family: $title-font;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: left;
+	color: $TEXT;
+	margin: 24px 0 28px 0;
+}
+
+.button-choice {
+    width: 128px;
+    height: 74px;
+    border-radius: 3px;
+    background-color: transparent;
+    border: solid 2px $LINE;
+    outline: none;
+    @extend %flex-col-sb;
+    align-items: flex-start;
+    padding: 13px;
+    position: relative;
+    &__title {
+        font-family: $base-font;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: left;
+        color: $GREY;
+    }
+    &__subtitle {
+        font-family: $base-font;
+        font-size: 9px;
+        font-weight: 500;
+        text-align: left;
+        color: $GREY;
+    }
+    &__price {
+        font-family: $base-font;
+        font-size: 10px;
+        font-weight: 500;
+        text-align: left;
+		color: $GREY;
+		&::after {
+			content: ' uah';
+		}
+    }
+    &__img {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        fill: $GREY;
+        right: 12px;
+        top: 12px;
+    }
+    &:hover {
+        background-color: $BUTTON-HOVER;
+        border-color: $BUTTON-HOVER;
+        transition: background-color ease-in-out 0.3s,
+            border-color ease-in-out 0.3s;
+    }
+    &:not(:hover) {
+        transition: background-color ease-in-out 0.3s,
+            border-color ease-in-out 0.3s;
+    }
+    &:hover &__title,
+    &:hover &__subtitle {
+        color: $BLACK;
+        transition: color ease-in-out 0.3s;
+    }
+    &:hover &__price {
+        color: #333333;
+        transition: color ease-in-out 0.3s;
+    }
+
+    &:not(:hover) &__title,
+    &:not(:hover) &__subtitle {
+        transition: color ease-in-out 0.3s;
+    }
+    &:not(:hover) &__price {
+        transition: color ease-in-out 0.3s;
+    }
+
+    &:hover &__img {
+        fill: $BLACK;
+        transition: fill ease-in-out 0.3s;
+    }
+
+    &:not(:hover) &__img {
+        transition: fill ease-in-out 0.3s;
+    }
+
+    &:focus {
+        background-color: $BUTTON-HOVER;
+        border-color: $BUTTON-HOVER;
+    }
+    &:focus &__title,
+    &:focus &__subtitle {
+        color: $BLACK;
+    }
+    &:focus &__price {
+        color: #333333;
+    }
+    &:focus &__img {
+        fill: $BLACK;
+    }
+}
+
+.label {
+    text-transform: uppercase;
+    font-family: $base-font;
+    font-size: 8px;
+    font-weight: bold;
+    text-align: left;
+    color: $TEXT;
+    @extend %flex-col-fs;
+    align-items: flex-start;
+    margin-bottom: 11px;
+}
+
+.input {
+    width: 202px;
+    height: 40px;
+    background-color: $BUTTON;
+    border: none;
+    outline: none;
+    text-indent: 16px;
+    font-family: $base-font;
+    font-size: 10px;
+    font-weight: 500;
+    text-align: left;
+    color: white;
+    &::placeholder {
+        text-indent: 16px;
+        color: $GREY;
+        font-size: 10px;
+        font-weight: 500;
+        font-family: $base-font;
+    }
+}
+
+.form {
+    &__description {
+        font-family: $base-font;
+        font-size: 10px;
+        font-weight: 500;
+        text-align: left;
+        color: $GREY;
+        margin-bottom: 24px;
+    }
+}
+
+.price {
+    font-family: $base-font;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 2;
+    text-align: left;
+    color: white;
+    &__sum {
+        font-family: $title-font;
+        font-size: 30px;
+        font-weight: 500;
+        text-align: left;
+        color: $MERGE;
+        &::after {
+            content: ' UAH';
+            text-transform: uppercase;
+            font-family: $base-font;
+            font-size: 8px;
+            font-weight: 700;
+            line-height: 2;
+            letter-spacing: 0.5px;
+            text-align: left;
+            color: $GREY;
+        }
+    }
+}
+
+.button-apply {
+	width: 100px;
+	height: 40px;
+	background-color: black;
+	border-radius: 3px;
+	outline: none;
+	border: none;
+	font-family: $base-font;
+	font-size: 10px;
+	font-weight: 700;
+	line-height: 1.5;
+	letter-spacing: 0.7px;
+	text-align: center;
+	color: #333333;
+	text-transform: uppercase;
+}
+
+.button-apply:hover {
+	background-color: $BUTTON-HOVER;
+	color: white;
+	transition: background-color ease-in-out 0.3s, color ease-in-out 0.3s;
+}
+
+.button-apply:not(:hover) {
+	transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+}

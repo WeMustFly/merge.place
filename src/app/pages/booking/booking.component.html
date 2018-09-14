@@ -1,0 +1,76 @@
+<div class="logo__wrapper">
+  <svg class="logo">
+    <use xlink:href='#logo' />
+  </svg>
+</div>
+<div class="container__wrapper">
+  <div class="container">
+    <div class="wrapper wrapper--fs wrapper--top-line">
+      <button class="button-back">
+        <svg class="button-back__img">
+          <use xlink:href='#arrow-left' />
+        </svg>
+      </button>
+      <p class="button-back__text">go back</p>
+    </div>
+    <h1 class="title">Booking of the
+      workplace
+    </h1>
+    <div class="wrapper wrapper--sb wrapper--middle-line">
+      <button class="button-choice">
+        <p class="button-choice__title">Month</p>
+        <p class="button-choice__subtitle">Resident card</p>
+        <p class="button-choice__price">1000</p>
+        <svg class="button-choice__img">
+          <use xlink:href='#infoborder' />
+        </svg>
+      </button>
+      <button class="button-choice">
+        <p class="button-choice__title">Week</p>
+        <p class="button-choice__price">400</p>
+        <svg class="button-choice__img">
+          <use xlink:href='#infoborder' />
+        </svg>
+      </button>
+      <button class="button-choice">
+        <p class="button-choice__title">Day</p>
+        <p class="button-choice__price">80</p>
+        <svg class="button-choice__img">
+          <use xlink:href='#infoborder' />
+        </svg>
+      </button>
+    </div>
+    <div class="wrapper-col wrapper-col--form">
+      <form action="" name='booking-form' class="form">
+        <div class="wrapper wrapper--sb wrapper--label-margin">
+          <div class="wrapper-col">
+            <label for="full-name-label" class="label">FULL NAME*</label>
+            <input id='full-name-label' required autocomplete='on' type="text" class="input" placeholder="Андрій Малишко">
+          </div>
+          <div class="wrapper-col">
+            <label for="phone-label" class="label">Phone*</label>
+            <input id='phone-label' required autocomplete='on' type="tel" class="input" placeholder="+38 (000) 000 00-00">
+          </div>
+        </div>
+        <div class="wrapper wrapper--sb">
+          <div class="wrapper-col">
+            <label for="email-label" class="label">E-mail*</label>
+            <input id='email-label' required autocomplete='on' type="email" class="input" placeholder="example@mail.com">
+          </div>
+          <div class="wrapper-col">
+            <label for="career-label" class="label">career</label>
+            <input id='career-label' type="text" autocomplete='on' class="input" placeholder="Програміст на Джава">
+          </div>
+        </div>
+      </form>
+    </div>
+    <p class="form__description">* — Required fields</p>
+    <div class="wrapper wrapper--sb wrapper--bottom-line">
+      <p class="price">
+        Price:
+        <span class="price__sum">1000</span>
+      </p>
+      <button class="button-apply">apply</button>
+    </div>
+  </div>
+</div>

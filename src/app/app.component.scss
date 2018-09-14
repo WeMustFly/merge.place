@@ -13,3 +13,10 @@
     display: flex;
     flex-direction: column;
 }
+
+app-booking {
+    width: 100%;
+    @extend %flex-col-c;
+    align-items: center;
+    min-width: 660px;
+}

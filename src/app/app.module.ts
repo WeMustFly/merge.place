@@ -8,6 +8,7 @@ import { MenuComponent } from './common/menu/menu.component';
 import { ButtonMembershipComponent } from './common/buttons/button-membership/button-membership.component';
 import { ButtonMapComponent } from './common/buttons/button-map/button-map.component';
 import { ButtonBookRoomComponent } from './common/buttons/button-book-room/button-book-room.component';
+import { BookingComponent } from './pages/booking/booking.component';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { ButtonBookRoomComponent } from './common/buttons/button-book-room/butto
         MenuComponent,
         ButtonMembershipComponent,
         ButtonMapComponent,
-        ButtonBookRoomComponent
+        ButtonBookRoomComponent,
+        BookingComponent
     ],
     imports: [BrowserModule],
     providers: [],
