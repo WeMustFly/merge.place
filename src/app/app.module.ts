@@ -17,7 +17,8 @@ import { ResidentCardComponent } from './pages/booking/resident-card/resident-ca
 const routes = [
     { path: '', component: HelloComponent},
     { path: 'menu', component: MenuComponent},
-    { path: 'booking', component: BookingComponent}
+    { path: 'booking', component: BookingComponent},
+    { path: 'resident', component: ResidentCardComponent}
 ]
 
 @NgModule({
