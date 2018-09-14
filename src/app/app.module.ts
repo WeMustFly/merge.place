@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './common/navigation/navigation.component';
@@ -13,6 +14,11 @@ import { LoaderComponent } from './common/loader/loader.component';
 import { ButtonResidentComponent } from './common/buttons/button-resident/button-resident.component';
 import { ResidentCardComponent } from './pages/booking/resident-card/resident-card.component';
 
+const routes = [
+    { path: '', component: HelloComponent},
+    { path: 'menu', component: MenuComponent},
+    { path: 'booking', component: BookingComponent}
+]
 
 @NgModule({
     declarations: [
@@ -28,7 +34,9 @@ import { ResidentCardComponent } from './pages/booking/resident-card/resident-ca
         ButtonResidentComponent,
         ResidentCardComponent
     ],
-    imports: [BrowserModule],
+    imports: [
+        BrowserModule, 
+        RouterModule.forRoot(routes)],
     providers: [],
     bootstrap: [AppComponent]
 })

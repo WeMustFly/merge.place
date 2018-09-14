@@ -10,17 +10,23 @@
 
 .container {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    @extend %flex-col;
 }
 
 app-booking {
     width: 100%;
-    @extend %flex-col-c;
-    align-items: center;
-    min-width: 660px;
+    
+    // @extend %flex-col-c;
+    // align-items: center;
+    // min-width: 660px;
 }
 
 app-loader {
     width: 100%;
+}
+
+app-hello {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }

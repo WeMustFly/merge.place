@@ -1,6 +1,12 @@
 @import '../../../scss/variables';
 @import '../../../scss/mixines';
 
+.page {
+    width: 100%;
+    @extend %flex-col-c;
+    align-items: center;
+}
+
 .logo {
     width: 31.1px;
     height: 40px;
